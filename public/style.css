@@ -1,0 +1,232 @@
+/* Geral */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  position: relative;
+}
+
+.message img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 5px;
+}
+
+.message a {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.message a:hover {
+  text-decoration: underline;
+}
+
+.file-download {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  position: relative;
+}
+
+.file-download::before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #007bff;
+  position: absolute;
+  left: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.file-download span {
+  margin-left: 10px;
+  color: #007bff;
+}
+
+.file-download:hover::before {
+  background-color: #0056b3;
+}
+
+.replying-to-message {
+  padding: 5px;
+  margin-bottom: 10px;
+  border-left: 2px solid #007bff;
+  background-color: #f1f8ff;
+  font-style: italic;
+}
+
+.reply-button, .delete-button {
+  border: solid;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 5px;
+}
+.reply-button{
+  background-color: #007bff;
+}
+.delete-button{
+  background-color: #c20000;
+}
+
+
+#replyingTo {
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background-color: #f1f8ff;
+  font-style: italic;
+}
+
+input[type="text"], input[type="file"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: calc(100% - 22px);
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Contêiner do chat */
+#chatContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#inputContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background-color: #fff;
+}
+/* Adicione isso ao seu CSS */
+
+.message-image {
+  max-width: 100%;
+  max-height: 300px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.file-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.file-icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.file-container a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.file-container a:hover {
+  text-decoration: underline;
+}
+
+.replying-to-message {
+  border-left: 2px solid #007bff;
+  padding-left: 10px;
+  margin-bottom: 5px;
+}
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 95%;
+  padding-top: 20px;
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto; /* Habilita a rolagem vertical */
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.replying-to {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+input,textarea, button {
+  margin: 5px;
+  padding: 10px;
+}
+
+#nameInput, #messageInput, #fileInput {
+  width: calc(97%); /* Ajusta a largura considerando o padding e margin */
+}
+
+#sendButton {
+  width: 50%;
+  align-self:center;
+}
+.cat-icon {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 60px;
+  height: 60px;
+  background: url('img/gato.png') no-repeat center center;
+  background-size: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.cat-icon:hover {
+  transform: translateY(-10px);
+}
+textarea{
+  resize: none;
+}
